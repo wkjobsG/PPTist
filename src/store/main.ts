@@ -37,6 +37,11 @@ export interface MainState {
   showNotesPanel: boolean
   showMarkupPanel: boolean
   showAIPPTDialog: boolean
+  AIPPTModel: string
+  AIPPTTemplate: string
+  AIPPTDemand: string
+  AIPPTOutline: string  // 新增：大纲内容
+  AIPPTStep: 'setup' | 'outline' | 'template'  // 新增：当前步骤
 }
 
 const nanoid = customAlphabet('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz')
@@ -73,6 +78,11 @@ export const useMainStore = defineStore('main', {
     showNotesPanel: false, // 打开批注面板
     showMarkupPanel: false, // 打开类型标注面板
     showAIPPTDialog: false, // 打开AIPPT创建窗口
+    AIPPTModel: '', // 
+    AIPPTTemplate: '', // 
+    AIPPTDemand: '', // 
+    AIPPTOutline: '',  // 新增
+    AIPPTStep: 'setup',  // 新增
   }),
 
   getters: {
@@ -205,6 +215,31 @@ export const useMainStore = defineStore('main', {
 
     setAIPPTDialogState(show: boolean) {
       this.showAIPPTDialog = show
+    },
+    setAIPPTModel(model: string) {
+      this.AIPPTModel = model
+    },
+    setAIPPTTemplate(template: string) {
+      this.AIPPTTemplate = template
+    },
+    setAIPPTDemand(demand: string) { 
+      this.AIPPTDemand = demand
+    },
+     setAIPPTOutline(outline: string) {
+      this.AIPPTOutline = outline
+    },
+    
+    setAIPPTStep(step: 'setup' | 'outline' | 'template') {
+      this.AIPPTStep = step
+    },
+    
+    // 重置AIPPT相关状态
+    resetAIPPTState() {
+      this.AIPPTModel = ''
+      this.AIPPTTemplate = ''
+      this.AIPPTDemand = ''
+      this.AIPPTOutline = ''
+      this.AIPPTStep = 'setup'
     },
   },
 })

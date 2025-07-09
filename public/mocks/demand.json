@@ -1,0 +1,7 @@
+{
+    "demand": "大学生职业生涯规划",
+    "model": "gpt-4o",
+    "template": "template_1",
+    "title": "大学生职业生涯规划",
+    "type": "aippt_demand"
+}

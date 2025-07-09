@@ -8,18 +8,25 @@
     </div>
     
     <template v-if="step === 'setup'">
-      <Input class="input" 
-        ref="inputRef"
-        v-model:value="keyword" 
-        :maxlength="50" 
-        placeholder="请输入PPT主题，如：大学生职业生涯规划" 
-        @enter="createOutline()"
-      >
-        <template #suffix>
-          <span class="count">{{ keyword.length }} / 50</span>
-          <div class="submit" type="primary" @click="createOutline()"><IconSend class="icon" /> AI 生成</div>
-        </template>
-      </Input>
+      <div class="textarea-container">
+        <textarea 
+          ref="inputRef"
+          class="area" 
+          v-model="keyword" 
+          :maxlength="120000" 
+          placeholder="请输入PPT主题，如：大学生职业生涯规划"
+          rows="15"
+          cols="90"
+          @keydown.enter.exact.prevent="createOutline()"
+          @keydown.shift.enter.exact.prevent="keyword += '\n'"
+        ></textarea>
+        <div class="textarea-footer">
+          <span class="count">{{ keyword.length }} / 120000</span>
+          <div class="submit" type="primary" @click="createOutline()">
+            <IconSend class="icon" /> AI 生成
+          </div>
+        </div>
+      </div>
       <div class="recommends">
         <div class="recommend" v-for="(item, index) in recommends" :key="index" @click="setKeyword(item)">{{ item }}</div>
       </div>
@@ -56,6 +63,9 @@
             style="width: 190px;"
             v-model:value="model"
             :options="[
+              { label: 'Qwen3-235B-A22B', value: 'Qwen3-235B-A22B' },
+              { label: 'gpt-4o', value: 'gpt-4o' },
+              { label: 'deepseek-v3', value: 'deepseek-v3' },
               { label: 'GLM-4-Flash', value: 'GLM-4-Flash' },
               { label: 'GLM-4-FlashX', value: 'GLM-4-FlashX' },
               { label: 'Douao-1.5-lite-32k', value: 'ark-doubao-1.5-lite-32k' },
@@ -111,7 +121,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { storeToRefs } from 'pinia'
 import api from '@/services'
 import useAIPPT from '@/hooks/useAIPPT'
@@ -124,6 +134,7 @@ import Button from '@/components/Button.vue'
 import Select from '@/components/Select.vue'
 import FullscreenSpin from '@/components/FullscreenSpin.vue'
 import OutlineEditor from '@/components/OutlineEditor.vue'
+import useSlideHandler from '@/hooks/useSlideHandler'
 
 const mainStore = useMainStore()
 const slideStore = useSlidesStore()
@@ -133,15 +144,17 @@ const { AIPPT, presetImgPool, getMdContent } = useAIPPT()
 const language = ref('中文')
 const style = ref('通用')
 const img = ref('')
-const keyword = ref('')
-const outline = ref('')
-const selectedTemplate = ref('template_1')
 const loading = ref(false)
 const outlineCreating = ref(false)
 const outlineRef = ref<HTMLElement>()
 const inputRef = ref<InstanceType<typeof Input>>()
-const step = ref<'setup' | 'outline' | 'template'>('setup')
-const model = ref('GLM-4-Flash')
+  // 修改响应式变量，从store获取初始值
+const step = ref<'setup' | 'outline' | 'template'>(mainStore.AIPPTStep || 'setup')
+const keyword = ref(mainStore.AIPPTDemand || '')
+const outline = ref(mainStore.AIPPTOutline || '')
+const model = ref(mainStore.AIPPTModel || 'gpt-4o')
+const selectedTemplate = ref(mainStore.AIPPTTemplate || 'template_1')
+const { resetSlides } = useSlideHandler()
 
 const recommends = ref([
   '公司年会策划方案',
@@ -156,15 +169,81 @@ const recommends = ref([
   '区块链技术及其应用',
 ]) 
 
+const initializeFromStore = () => {
+  // 从store获取数据并设置到组件状态
+  if (mainStore.AIPPTDemand) {
+    keyword.value = mainStore.AIPPTDemand
+  }
+  if (mainStore.AIPPTOutline) {
+    outline.value = mainStore.AIPPTOutline
+  }
+  if (mainStore.AIPPTModel) {
+    model.value = mainStore.AIPPTModel
+  }
+  if (mainStore.AIPPTTemplate) {
+    selectedTemplate.value = mainStore.AIPPTTemplate
+  }
+  if (mainStore.AIPPTStep) {
+    step.value = mainStore.AIPPTStep
+  }
+}
+
+// 在组件挂载时初始化
 onMounted(() => {
+  initializeFromStore()
+  
+  // 如果有大纲内容且步骤是outline，则直接显示大纲
+  if (mainStore.AIPPTOutline && mainStore.AIPPTStep === 'outline') {
+    step.value = 'outline'
+    outline.value = mainStore.AIPPTOutline
+    outlineCreating.value = false
+  }
+  
   setTimeout(() => {
-    inputRef.value!.focus()
+    if (inputRef.value && step.value === 'setup') {
+      inputRef.value.focus()
+    }
   }, 500)
+})
+
+
+// 监听store变化
+watch(() => mainStore.AIPPTDemand, (newDemand) => {
+  if (newDemand) {
+    keyword.value = newDemand
+  }
+})
+
+watch(() => mainStore.AIPPTModel, (newModel) => {
+  if (newModel) {
+    model.value = newModel
+  }
+})
+
+watch(() => mainStore.AIPPTTemplate, (newTemplate) => {
+  if (newTemplate) {
+    selectedTemplate.value = newTemplate
+  }
+})
+
+// 监听store变化，实时同步
+watch(() => mainStore.AIPPTStep, (newStep) => {
+  if (newStep) {
+    step.value = newStep
+  }
+})
+
+watch(() => mainStore.AIPPTOutline, (newOutline) => {
+  if (newOutline) {
+    outline.value = newOutline
+  }
 })
 
 const setKeyword = (value: string) => {
   keyword.value = value
-  inputRef.value!.focus()
+  if (inputRef.value) {
+    inputRef.value.focus()
+  }
 }
 
 const createOutline = async () => {
@@ -209,9 +288,8 @@ const createOutline = async () => {
 
 const createPPT = async () => {
   loading.value = true
-
   const stream = await api.AIPPT({
-    content: outline.value,
+    content: "大纲内容："+outline.value+"\n\n原始主题："+keyword.value,
     language: language.value,
     style: style.value,
     model: model.value,
@@ -247,7 +325,6 @@ const createPPT = async () => {
         }
       }
       catch (err) {
-        // eslint-disable-next-line
         console.error(err)
       }
 

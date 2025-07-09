@@ -29,6 +29,8 @@ export interface AIPPTContent {
     items: {
       title: string
       text: string
+      table?: string  // 新增表格HTML字符串
+      image?: string  // 新增图片链接
     }[]
   },
   offset?: number

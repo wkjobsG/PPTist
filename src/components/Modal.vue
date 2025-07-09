@@ -9,7 +9,7 @@
         >
           <div class="modal-content" v-show="visible" :style="contentStyle">
             <span class="close-btn" v-if="closeButton" @click="close()"><IconClose /></span>
-            <slot v-if="contentVisible"></slot>
+            <slot v-if="visible"></slot>
           </div>
         </Transition>
       </div>
