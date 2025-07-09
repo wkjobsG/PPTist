@@ -1,0 +1,344 @@
+{
+    "slides": [
+        {
+            "type": "cover",
+            "data": {
+                "title": "钢铁行业经营与市场分析报告",
+                "text": "2025年3月钢铁行业经营与市场情况分析"
+            }
+        },
+        {
+            "type": "contents",
+            "data": {
+                "items": [
+                    "经营综述",
+                    "购销市场跟踪",
+                    "经营综合分析"
+                ]
+            }
+        },
+        {
+            "type": "transition",
+            "data": {
+                "title": "经营综述",
+                "text": "2025年3月钢铁行业主要产品价格、利润、产量及现金流情况分析"
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "主要产品价格与利润",
+                "items": [
+                    {
+                        "title": "铁矿石价格走势",
+                        "text": "2025年3月铁矿石62%普氏指数平均102.43美元/吨，环比下跌4.47美元/吨，降幅4.2%。"
+                    },
+                    {
+                        "title": "焦煤价格走势",
+                        "text": "山西地区主焦煤平均1200元/吨，环比下跌95.26元/吨，降幅7.4%。",
+                        "table": "<table class=\"excel-table-zpoiaumoll-table\"> <tr> <th rowspan=\"2\" class=\"excel-table-zpoiaumoll-th excel-table-zpoiaumoll-first-column\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"单位\">单位</th> <th colspan=\"7\" class=\"excel-table-zpoiaumoll-th\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"利润总额\">利润总额</th> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"年度预算\">年度预算</td> <td class=\"excel-table-zpoiaumoll-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"2月\">2月</td> <td class=\"excel-table-zpoiaumoll-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"3月\">3月</td> <td class=\"excel-table-zpoiaumoll-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"本年累计\">本年累计</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"完成率\">完成率</td> <td class=\"excel-table-zpoiaumoll-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"去年同期\">去年同期</td> <td class=\"excel-table-zpoiaumoll-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"同比\">同比</td> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-first-column\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"产业金融业务\">产业金融业务</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"38.4\">38.4</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"3.0\">3</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"5.4\">5.4</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"10.7\">10.7</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: transparent;; font-weight: bold; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"28.0%\">28.0%</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"9.9\">9.9</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.8\">0.8</td> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"华宝投资\">华宝投资</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"12.1\">12.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.1\">1.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.4\">2.4</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"4.0\">4</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"33.0%\">33.0%</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"3.7\">3.7</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.4\">0.4</td> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"华宝信托\">华宝信托</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"8.0\">8</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.6\">0.6</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.1\">1.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.1\">2.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"26.0%\">26.0%</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.1\">2.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.0\">0</td> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"华宝基金\">华宝基金</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"7.1\">7.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.6\">0.6</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.6\">0.6</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.7\">1.7</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"25.0%\">25.0%</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.7\">1.7</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.1\">0.1</td> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"华宝证券\">华宝证券</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.8\">2.8</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.3\">0.3</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.2\">0.2</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.8\">0.8</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"27.0%\">27.0%</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.5\">0.5</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.3\">0.3</td> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"财务公司\">财务公司</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"8.0\">8</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.4\">0.4</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.1\">1.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.0\">2</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"25.0%\">25.0%</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.0\">2</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.0\">0</td> </tr> <tr> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"华宝股权\">华宝股权</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.4\">0.4</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.04\">0</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.03\">0</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.11\">0.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"31.0%\">31.0%</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.1\">0.1</td> <td class=\"excel-table-zpoiaumoll-td excel-table-zpoiaumoll-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.0\">0</td> </tr> </table>"
+                    },
+                    {
+                        "title": "钢材价格指数",
+                        "text": "3月中钢协国内钢材价格指数（CSPI）94.67点，环比下跌1.34，降幅1.4%。"
+                    },
+                    {
+                        "title": "钢企利润情况",
+                        "text": "87家大中型钢企当月利润109.1亿元，累计实现利润215.8亿元，同比提升107.9%。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "重点企业利润表现",
+                "items": [
+                    {
+                        "title": "宝武集团",
+                        "text": "利润同比提升12.0%。",
+                        "table": "<table class=\"excel-table-lyaeuroxvf-table\"> <tr> <th rowspan=\"2\" class=\"excel-table-lyaeuroxvf-th excel-table-lyaeuroxvf-first-column\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"单位\">单位</th> <th colspan=\"7\" class=\"excel-table-lyaeuroxvf-th\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"利润总额\">利润总额</th> </tr> <tr> <td class=\"excel-table-lyaeuroxvf-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"年度预算\">年度预算</td> <td class=\"excel-table-lyaeuroxvf-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"2月\">2月</td> <td class=\"excel-table-lyaeuroxvf-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"3月\">3月</td> <td class=\"excel-table-lyaeuroxvf-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"本年累计\">本年累计</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-percent-cell\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"完成率\">完成率</td> <td class=\"excel-table-lyaeuroxvf-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"去年同期\">去年同期</td> <td class=\"excel-table-lyaeuroxvf-td\" style=\"background-color: rgb(0, 51, 102); color: #ffffff;; font-weight: bold; font-size: 12.0pt; font-family: '黑体'\" data-value=\"同比\">同比</td> </tr> <tr> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-first-column\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"产业不动产业务\">产业不动产业务</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"20.5\">20.5</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"4.0\">4</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.3\">2.3</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"7.1\">7.1</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-percent-cell\" style=\"background-color: transparent;; font-weight: bold; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"35.0%\">35.0%</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"5.9\">5.9</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-weight: bold; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.2\">1.2</td> </tr> <tr> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"武钢集团\">武钢集团</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"8.6\">8.6</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.7\">1.7</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"1.7\">1.7</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"3.7\">3.7</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"44.0%\">44.0%</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"3.1\">3.1</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.7\">0.7</td> </tr> <tr> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"宝地资产\">宝地资产</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"4.8\">4.8</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.4\">2.4</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.3\">0.3</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"3.2\">3.2</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"67.0%\">67.0%</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"2.8\">2.8</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.5\">0.5</td> </tr> <tr> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-first-column\" style=\"background-color: rgb(255, 255, 0); color: #000000;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"重钢集团\">重钢集团</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"7.1\">7.1</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.0\">0</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.3\">0.3</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.1\">0.1</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-percent-cell\" style=\"background-color: transparent;; font-size: 11.0pt; font-family: '微软雅黑'\" data-value=\"1.0%\">1.0%</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.1\">0.1</td> <td class=\"excel-table-lyaeuroxvf-td excel-table-lyaeuroxvf-number-cell\" style=\"background-color: transparent;; font-size: 12.0pt; font-family: '微软雅黑'\" data-value=\"0.0\">0</td> </tr> </table>"
+                    },
+                    {
+                        "title": "主要钢企利润",
+                        "text": "首钢集团利润24.9亿元，湖南钢铁19.7亿元，中信泰富18.0亿元。"
+                    },
+                    {
+                        "title": "亏损情况",
+                        "text": "87家大中型钢企中亏损26户，亏损面29.9%。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "产量与销售完成情况",
+                "items": [
+                    {
+                        "title": "铁精矿产量",
+                        "text": "3月完成333万吨，累计完成950.4万吨，完成年度预算的23.1%。"
+                    },
+                    {
+                        "title": "钢产量",
+                        "text": "3月完成1097万吨，累计完成3158万吨，完成年度预算23.8%。"
+                    },
+                    {
+                        "title": "商品坯材产量",
+                        "text": "3月完成1078万吨，累计完成3017万吨，完成年度预算23.2%。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "现金流与两金情况",
+                "items": [
+                    {
+                        "title": "现金流",
+                        "text": "1-3月集团累计经营应得现金139.1亿元，实得现金9.6亿元，实得应得比6.9%。"
+                    },
+                    {
+                        "title": "存货与应收账款",
+                        "text": "两金合计1462亿元，其中存货净值1117亿元，应收账款净值346亿元。"
+                    },
+                    {
+                        "title": "两金周转天数",
+                        "text": "集团两金周转天数76.8天，较年初增加13.7天。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "transition",
+            "data": {
+                "title": "购销市场跟踪",
+                "text": "铁矿石、焦煤、合金、废钢及钢材市场走势分析"
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "大宗原燃料市场",
+                "items": [
+                    {
+                        "title": "铁矿石",
+                        "text": "1-3月铁矿石价格指数平均103.67美元/吨，同比下跌19.89美元/吨，跌幅16.1%。"
+                    },
+                    {
+                        "title": "焦煤",
+                        "text": "短期基本面略有改善，但焦煤过剩短期难以扭转。"
+                    },
+                    {
+                        "title": "合金",
+                        "text": "硅锰价格震荡偏弱，铬铁、镍铁受成本支撑价格上涨。"
+                    },
+                    {
+                        "title": "废钢",
+                        "text": "3月废钢价格环比下跌，市场情绪谨慎。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "铁矿石价格趋势图",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图片展示铁矿石价格走势。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmpjnwxo8xu.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "焦煤市场走势图",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图片展示焦煤价格走势。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmppishxtou.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "合金价格走势",
+                "items": [
+                    {
+                        "title": "硅锰价格走势",
+                        "text": "图表展示硅锰价格走势。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmp72htmzyh.png"
+                    },
+                    {
+                        "title": "铬铁、镍铁价格走势",
+                        "text": "图表展示铬铁、镍铁价格走势。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmp0f37l_lf.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "废钢价格走势图",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图片展示废钢价格走势。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmpatjp4b7l.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "主要钢材销售市场",
+                "items": [
+                    {
+                        "title": "碳钢市场",
+                        "text": "3月制造业PMI回升至50.5%，钢材价格指数继续下跌。"
+                    },
+                    {
+                        "title": "不锈钢市场",
+                        "text": "供应充足，需求逐步恢复。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "不锈钢供需变化图",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图片展示不锈钢供需情况。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmpab0fxtrk.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "碳钢市场走势图",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图片展示碳钢价格走势。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmp76koitik.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "transition",
+            "data": {
+                "title": "经营综合分析",
+                "text": "钢铁制造业利润分布、吨钢毛利、铁水成本与生态圈协同发展情况"
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "集团经营总体情况",
+                "items": [
+                    {
+                        "title": "营业收入",
+                        "text": "3月营业收入658亿元，完成年度预算21.7%，同比减少21.1%。"
+                    },
+                    {
+                        "title": "利润情况",
+                        "text": "当月利润32.5亿元，完成预算20.9%，同比增加12%。"
+                    },
+                    {
+                        "title": "钢铁制造业利润",
+                        "text": "钢铁制造业利润14.7亿元，其他产业利润21.9亿元。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "各产业利润完成情况对比表",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图表展示各产业利润完成情况。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmpjnwxo8xu.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "主要钢铁基地吨钢利润分析图",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图表展示吨钢利润分布。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmpjnwxo8xu.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "生态圈协同发展",
+                "items": [
+                    {
+                        "title": "先进材料业",
+                        "text": "3月利润0.9亿元，同比减少0.6亿元。"
+                    },
+                    {
+                        "title": "绿色资源业",
+                        "text": "利润6.5亿元，同比减少7.4亿元。"
+                    },
+                    {
+                        "title": "智慧服务业",
+                        "text": "利润6.8亿元，同比减少1.6亿元。"
+                    },
+                    {
+                        "title": "产业不动产业务",
+                        "text": "利润2.3亿元，同比提升1.2亿元。"
+                    },
+                    {
+                        "title": "产业金融业务",
+                        "text": "利润5.4亿元，同比提升0.8亿元。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "content",
+            "data": {
+                "title": "现金流与预算执行对比图",
+                "items": [
+                    {
+                        "title": "图表",
+                        "text": "图表展示现金流与预算执行情况。",
+                        "image": "http://llmtest.ouyeelf.com/tmp-dir/word_image_tmpjnwxo8xu.png"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "end"
+        }
+    ],
+    "template": "template_7",
+    "title": "ppt_aippt_",
+    "type": "aippt_slides"
+}
