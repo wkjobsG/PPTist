@@ -1,148 +1,41 @@
-from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
-from pydantic import BaseModel, Field
 import asyncio
-import os
-from dotenv import load_dotenv
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List
 
-from langchain.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from langchain_openai import ChatOpenAI
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import StreamingResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
-# 加载.env环境变量
-load_dotenv()
+# 导入PPT模块
+from ppt import (
+    PPTOutlineRequest,
+    PPTContentRequest,
+    AIWritingRequest,
+    PPTSaveRequest,
+    build_outline_chain,
+    build_ppt_content_chain,
+    build_ai_writing_chain,
+    save_ppt_json,
+    STATIC_DIR
+)
 
-app = FastAPI()
+# 创建FastAPI应用（用于兼容原有接口）
+app = FastAPI(title="AI PPT MCP Server", version="1.0.0")
 
-# PPT大纲生成Prompt
-def get_outline_prompt():
-    template = """你是用户的PPT大纲生成助手，请根据下列主题生成章节结构。
+# 添加CORS中间件
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 允许所有来源，生产环境建议指定具体域名
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-输出格式为：
-# PPT标题（只有一个）
-## 章的名字
-### 节的名字
-- 内容1
-- 内容2
-- 内容3
-### 节的名字
-- xxxxx
-- xxxxx
-- xxxxx
-### 节的名字
-- xxxxx
-- xxxxx
-- xxxxx
+app.mount("/files", StaticFiles(directory=str(STATIC_DIR)), name="files")
 
-这是生成要求：{require}\n
-这是生成的语言要求：{language}
-"""
-    return PromptTemplate.from_template(template)
-
-def build_outline_chain(model_name: str = None):
-    api_key = os.environ.get("OPENAI_API_KEY")
-    base_url = os.environ.get("OPENAI_BASE_URL")
-    default_model = os.environ.get("AIPPT_MODEL", "gpt-4o")
-    model = model_name or default_model
-    llm = ChatOpenAI(
-        temperature=0.7,
-        model=model,
-        openai_api_key=api_key,
-        base_url=base_url
-    )
-    return get_outline_prompt() | llm | StrOutputParser()
-
-# PPT内容生成Prompt
-def get_ppt_content_prompt():
-    ppt_content_template = """
-你是一个专业的PPT内容生成助手，请根据给定的大纲内容和原始要求，生成完整的PPT页面内容结构。
-
-页面类型包括：
-- 封面页："cover"
-- 目录页："contents"
-- 内容页："content"
-- 过渡页："transition"
-- 结束页："end"
-
-输出格式要求如下：
-- 每一页为一个独立 JSON 对象
-- 每个 JSON 对象写在**同一行**
-- 页面之间用两个换行符分隔
-- 不要添加任何注释或解释说明
-- 如果用户要求根据提供的材料生成ppt，尽量把用户提供的材料内容充分利用
-
-示例格式（注意每个 JSON 占一行）：
-
-{{"type": "cover", "data": {{ "title": "接口相关内容介绍", "text": "了解接口定义、设计与实现要点" }}}}
-
-{{"type": "contents", "data": {{ "items": ["接口定义概述", "接口分类详情", "接口设计原则"] }}}}
-
-{{"type": "transition", "data": {{ "title": "接口定义", "text": "开始介绍接口的基本含义" }}}}
-
-{{"type": "content", "data": {{ "title": "接口定义", "items": [ {{ "title": "基本概念", "text": "接口是系统中模块通信的协议" }}, {{ "title": "作用", "text": "促进模块解耦，提高系统灵活性" }} ] }}}}
-
-{{"type": "end"}}
-
-请根据以下信息生成 PPT 内容：
-
-语言：{language}
-大纲内容和原始要求：{content}
-"""
-    return PromptTemplate.from_template(ppt_content_template)
-
-def build_ppt_content_chain(model_name: str = None):
-    api_key = os.environ.get("OPENAI_API_KEY")
-    base_url = os.environ.get("OPENAI_BASE_URL")
-    default_model = os.environ.get("AIPPT_MODEL", "gpt-4o")
-    model = model_name or default_model
-    llm = ChatOpenAI(
-        temperature=0.7,
-        model=model,
-        openai_api_key=api_key,
-        base_url=base_url
-    )
-    return get_ppt_content_prompt() | llm | StrOutputParser()
-
-# PPT内容优化Prompt
-def get_ai_writing_prompt():
-    ai_writing_template = """
-你是一个专业的PPT内容优化助手，请根据给定的优化指令和原始内容，生成优化后的内容。
-
-优化指令：{command}
-原始内容：{content}
-"""
-    return PromptTemplate.from_template(ai_writing_template)
-
-def build_ai_writing_chain(model_name: str = None):
-    api_key = os.environ.get("OPENAI_API_KEY")
-    base_url = os.environ.get("OPENAI_BASE_URL")
-    default_model = os.environ.get("AIPPT_MODEL", "gpt-4o")
-    model = model_name or default_model
-    llm = ChatOpenAI(
-        temperature=0.7,
-        model=model,
-        openai_api_key=api_key,
-        base_url=base_url
-    )
-    return get_ai_writing_prompt() | llm | StrOutputParser()
-
-class PPTOutlineRequest(BaseModel):
-    model: str = Field(None, description="使用的模型名称，例如 gpt-4o 或 gpt-4o-mini")
-    language: str = Field(..., description="生成内容的语言，例如 中文、English")
-    content: str = Field(..., description="生成的要求")
-    stream: bool = True
-
-class PPTContentRequest(BaseModel):
-    model: str = Field(None, description="使用的模型名称，例如 gpt-4o 或 gpt-4o-mini")
-    language: str = Field(..., description="生成内容的语言，例如 中文、English")
-    content: str = Field(..., description="大纲内容")
-    stream: bool = True
-class AIWritingRequest(BaseModel):
-    model: str = Field(None, description="使用的模型名称，例如 gpt-4o 或 gpt-4o-mini")
-    content: str = Field(None, description="需要AI优化的内容")
-    command: str = Field(..., description="AI优化指令")
-    stream: bool = True
-
+# 原有FastAPI接口（用于兼容性）
 @app.post("/tools/aippt_outline")
 async def generate_ppt_outline_stream(request: PPTOutlineRequest):
     chain = build_outline_chain(request.model)
@@ -151,11 +44,11 @@ async def generate_ppt_outline_stream(request: PPTOutlineRequest):
         try:
             print("[调试] /tools/aippt_outline 调用参数：", {
                 "require": request.content,
-                "language": request.language,
+                "language": request.language,                           
                 "model": request.model
             })
             async for chunk in chain.astream({
-                "require": request.content,  # 用 content 字段传递到 prompt
+                "require": request.content,
                 "language": request.language
             }):
                 yield chunk
@@ -163,7 +56,6 @@ async def generate_ppt_outline_stream(request: PPTOutlineRequest):
             import traceback
             print("[AIPPT Outline Streaming Error]", e)
             traceback.print_exc()
-            # 返回错误信息到前端
             yield f"\n[ERROR]: {str(e)}\n"
 
     return StreamingResponse(token_stream(), media_type="text/event-stream")
@@ -187,7 +79,7 @@ async def generate_ppt_content_stream(request: PPTContentRequest):
     return StreamingResponse(stream_pages(), media_type="text/event-stream")
 
 @app.post("/tools/ai_writing")
-async def generate_ppt_content_stream(request: AIWritingRequest):
+async def generate_ai_writing_stream(request: AIWritingRequest):
     chain = build_ai_writing_chain(request.model)
 
     full_output: str = await chain.ainvoke({
@@ -204,6 +96,51 @@ async def generate_ppt_content_stream(request: AIWritingRequest):
 
     return StreamingResponse(stream_pages(), media_type="text/event-stream")
 
-if __name__ == "__main__":
+# API文档和状态接口
+@app.get("/")
+async def root():
+    return {
+        "name": "AI PPT MCP Server",
+        "version": "1.0.0",
+        "mcp_tools": [
+            "generate_ppt_outline",
+            "generate_ppt_content",
+            "optimize_ppt_content",
+            "save_ppt_to_file",
+            "generate_complete_ppt"
+        ],
+        "legacy_endpoints": [
+            "/tools/aippt_outline",
+            "/tools/aippt",
+            "/tools/ai_writing"
+        ]
+    }
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "timestamp": datetime.now().isoformat()}
+
+# 启动函数
+def run_fastapi_server():
+    """运行FastAPI服务器"""
     import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=5000, reload=True)
+    print("启动 AI PPT FastAPI Server...")
+    print("兼容API地址: http://127.0.0.1:5000")
+    print("API文档: http://127.0.0.1:5000/docs")
+    print("健康检查: http://127.0.0.1:5000/health")
+    
+    # 启动FastAPI服务器用于兼容接口
+    uvicorn.run("main:app", host="0.0.0.0", port=5000, reload=False)
+
+# 主程序入口
+if __name__ == "__main__":
+    # 可以选择运行FastAPI服务器或MCP服务器
+    import sys
+    
+    if len(sys.argv) > 1 and sys.argv[1] == "mcp":
+        # 运行MCP服务器
+        from mcp_starter import run_mcp_server
+        run_mcp_server()
+    else:
+        # 默认运行FastAPI服务器
+        run_fastapi_server()
